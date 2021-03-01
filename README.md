@@ -23,9 +23,7 @@
 	apt install coturn -y
 	mv /etc/turnserver.conf /etc/turnserver.conf.bak
 #### Coturn-Dienst aktivieren
-	vim /etc/default/coturn
-#### Kommentar-Zeichen entfernen:
-	TURNSERVER_ENABLED=1
+	sudo sed -i '/TURNSERVER_ENABLED/c\TURNSERVER_ENABLED=1' /etc/default/coturn
 #### Konfiguration des Coturn-Servers erzeugen
 #### Ersetzen Sie in der nachfolgenden Konfiguration <Schlüssel 1> mit dem oben erzeugten Schlüssel.
 	vim /etc/turnserver.conf
