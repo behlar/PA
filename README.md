@@ -26,3 +26,20 @@
 	vim /etc/default/coturn
 #### Kommentar-Zeichen entfernen:
 	TURNSERVER_ENABLED=1
+#### Konfiguration des Coturn-Servers erzeugen
+#### Ersetzen Sie in der nachfolgenden Konfiguration <Schlüssel 1> mit dem oben erzeugten Schlüssel.
+	vim /etc/turnserver.conf
+# Folgenden Inhalt in die Datei einfügen, <Schlüssel 1> und <Schlüssel 6> durch die oben erzeugten Schlüssel ersetzen und die Domäne (realm=) anpassen:
+	listening-port=3478
+	fingerprint
+	use-auth-secret
+	static-auth-secret=<Schlüssell 1>
+	realm=
+	total-quota=0
+	bps-capacity=0
+	no-tls
+	no-dtls
+	stale-nonce
+	no-stdout-log
+	log-file=/tmp/coturn.log
+	no-multicast-peers
