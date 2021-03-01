@@ -29,7 +29,7 @@
 #### Konfiguration des Coturn-Servers erzeugen
 #### Ersetzen Sie in der nachfolgenden Konfiguration <Schlüssel 1> mit dem oben erzeugten Schlüssel.
 	vim /etc/turnserver.conf
-# Folgenden Inhalt in die Datei einfügen, <Schlüssel 1> und <Schlüssel 6> durch die oben erzeugten Schlüssel ersetzen und die Domäne (realm=) anpassen:
+#### Folgenden Inhalt in die Datei einfügen, <Schlüssel 1> und <Schlüssel 6> durch die oben erzeugten Schlüssel ersetzen und die Domäne (realm=) anpassen:
 	listening-port=3478
 	fingerprint
 	use-auth-secret
