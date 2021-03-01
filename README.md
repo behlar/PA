@@ -19,3 +19,10 @@
 	openssl rand -hex 16
 #### Hash-Key (Schlüssel 5)
 	openssl rand -hex 16
+#### Coturn
+	apt install coturn -y
+	mv /etc/turnserver.conf /etc/turnserver.conf.bak
+#### Coturn-Dienst aktivieren
+	vim /etc/default/coturn
+#### Kommentar-Zeichen entfernen:
+	TURNSERVER_ENABLED=1
